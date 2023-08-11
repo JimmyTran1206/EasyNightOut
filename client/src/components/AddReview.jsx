@@ -35,6 +35,7 @@ function AddReview() {
               placeholder="Name"
               type="text"
               className="form-control"
+              autocomplete="off"
             />
           </div>
           <div className="col-4">

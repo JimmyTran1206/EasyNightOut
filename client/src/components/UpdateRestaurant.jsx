@@ -6,14 +6,14 @@ function UpdateRestaurant(props) {
   const { id } = useParams();
   const [name, setName] = useState('');
   const [location, setLocation] = useState('');
-  const [priceRange, setPriceRange] = useState('1');
+  const [priceRange, setPriceRange] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await RestaurantFinder.get(`/${id}`);
       setName(response.data.data.name);
       setLocation(response.data.data.location);
-      setPriceRange(response.data.data.priceRange);
+      setPriceRange('Price Range');
     };
     fetchData();
   }, [id]);
@@ -38,6 +38,7 @@ function UpdateRestaurant(props) {
             id="name"
             className="form-control"
             type="text"
+            autocomplete="off"
           />
         </div>
         <div className="form-group mt-3">
@@ -48,6 +49,7 @@ function UpdateRestaurant(props) {
             id="location"
             className="form-control"
             type="text"
+            autocomplete="off"
           />
         </div>
         <div className="form-group mt-3">
@@ -57,6 +59,7 @@ function UpdateRestaurant(props) {
             onChange={(event) => setPriceRange(event.target.value)}
             id="priceRange"
             className="form-select">
+            <option disabled>Price Range</option>
             <option value="1">$</option>
             <option value="2">$$</option>
             <option value="3">$$$</option>

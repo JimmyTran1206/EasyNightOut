@@ -39,6 +39,7 @@ function UpdateRestaurant(props) {
             className="form-control"
             type="text"
             autocomplete="off"
+            required
           />
         </div>
         <div className="form-group mt-3">
@@ -50,6 +51,7 @@ function UpdateRestaurant(props) {
             className="form-control"
             type="text"
             autocomplete="off"
+            required
           />
         </div>
         <div className="form-group mt-3">

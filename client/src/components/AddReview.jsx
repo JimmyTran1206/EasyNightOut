@@ -36,6 +36,7 @@ function AddReview() {
               type="text"
               className="form-control"
               autocomplete="off"
+              required
             />
           </div>
           <div className="col-4">
@@ -60,7 +61,8 @@ function AddReview() {
             value={reviewText}
             onChange={(event) => setReviewText(event.target.value)}
             id="review"
-            className="form-control"></textarea>
+            className="form-control"
+            required></textarea>
         </div>
         <button
           onClick={handleSubmitReview}

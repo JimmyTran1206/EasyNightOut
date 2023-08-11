@@ -35,6 +35,7 @@ function AddRestaurant() {
               className="form-control"
               placeholder="name"
               autocomplete="off"
+              required
             />
           </div>
           <div className="col">
@@ -45,6 +46,7 @@ function AddRestaurant() {
               className="form-control"
               placeholder="location"
               autocomplete="off"
+              required
             />
           </div>
           <div className="col">

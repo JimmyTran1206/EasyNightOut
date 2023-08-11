@@ -6,7 +6,7 @@ function UpdateRestaurant(props) {
   const { id } = useParams();
   const [name, setName] = useState('');
   const [location, setLocation] = useState('');
-  const [priceRange, setPriceRange] = useState('');
+  const [priceRange, setPriceRange] = useState('1');
 
   useEffect(() => {
     const fetchData = async () => {
